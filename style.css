@@ -11,6 +11,22 @@ h1{
     height: 100px;
     background-color: beige;
     border: 2px solid gray;
-    display: inline-block;
+    display: inline-block;  
     
+}
+.o{
+    width: 100px;
+    height: 100px;
+    background-image: url("images/circle-icon.svg"); 
+    background-size: 5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.x{
+    width: 100px;
+    height: 100px;
+    background-image: url("images/x-icon.svg"); 
+    background-size: 5rem;
+    background-repeat: no-repeat;
+    background-position: center;
 }
