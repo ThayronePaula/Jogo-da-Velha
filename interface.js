@@ -11,31 +11,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function handClick(event){
     let square = event.target;
     let postion = square.id;
-    handMove(postion);
+    if(handMove(postion)){
+        setTimeout(() => {
+            joga = playerTime + 1
+            alert("venceu o jogador " + joga )
+        }, 1);
+    }
 
-    updateSquares();
+    updateSquare(postion);
 }
 
+function updateSquare(postion){
+    let square = document.getElementById(postion.toString())
+    let symbols = board[postion];
+    console.log(symbols)
+    square.innerHTML = `<div class='${symbols}'></div>`
 
-function updateSquares(){
-    
-    let squares = document.querySelectorAll('.square');
-
-    squares.forEach((square)=>{
-
-        let position = square.id;
-
-
-        let symbols = board[position];
-        console.log(symbols)
-
-
-        if (symbols != '') {
-        square.innerHTML = `<div class='${symbols}'></div>`
-        }
-
-
-
-    })
 }
 
